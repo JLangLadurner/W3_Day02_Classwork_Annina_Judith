@@ -3,6 +3,28 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * Worm-up: Create a HashMap object and demonstrate following procedures:
+ *
+ *     add key-value pairs to HashMap (String, pointing to String)
+ *
+ *     retrieve a value associated with a given key from the HashMap
+ *
+ *     check whether a particular key/value exist in a HashMap
+ *
+ *     find out the number of key-value mappings present in a HashMap
+ *
+ *     remove all key-value pairs from a HashMap
+ *
+ *     Iterate through all key-value pairs and print them
+ *
+ *     remove a key-value pair
+ *
+ *     replace a value associated with a given key
+ *
+ *     replace a value associated with the given key if and only if it is currently mapped to given value
+ *     (note: research different implementation of replace() method)
+ */
 public class Main {
 
     public static void main(String[] args) {
