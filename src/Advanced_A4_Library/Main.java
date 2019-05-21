@@ -27,14 +27,20 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        //user creation
+
         User usr1 = new User("Otto", "otto@anyemail.com");
         User usr2 = new User("Annina", "annina@anyemail.com");
         User usr3 = new User("Simon", "simon@anyemail.com");
 
-        Book book1 = new Book ("Harry Potter I", "J.K. Rowling", "Blooming");
-        Book book2 = new Book ("Hänsel und Gretel", "Gebrüder Grimm", "Keine Ahnung");
-        Book book3 = new Book ("Harry III", "J.k. Rowling", "Blooming");
+        HashMap<String, User> users = new HashMap<>();
+        users.put("u1", usr1);
+        users.put("u2", usr2);
+        users.put("u3", usr3);
+
+        Book book1 = new Book ("Harry Potter I", "J.K. Rowling", "Blooming",Book.Status.Available);
+        Book book2 = new Book ("Hänsel und Gretel", "Gebrüder Grimm", "Keine Ahnung",Book.Status.Available);
+        Book book3 = new Book ("Harry III", "J.k. Rowling", "Blooming",Book.Status.Available);
+        Book book4 = new Book ("Harry Potter IV", "JK Rowling","Bloomings", Book.Status.notAvailable);
 
         HashMap <String, Book> books = new HashMap<>();
         books.put("b1",book1);
@@ -51,11 +57,21 @@ public class Main {
         Library lib1 = new Library(bookLib);
         Library lib2 = new Library(bookLib2);
 
-        rentABook("b1", "u1");
+        HashMap<String, Library> libs = new HashMap<>();
+        libs.put("l1", lib1);
+        libs.put("l2", lib2);
+
+        rentABook(books.get("b1"), users.get("u1"), libs.get("l1"));
+        returnABook(books.get("b1"), users.get("u1"), libs.get("l1"));
+
     }
 
-    public static void rentABook(String bookId, String userID){
-
+    public static void rentABook(Book bookId, User userID, Library libID){
+        bookId.rentingBook();
+        userID.setUsrBooks(bookId);
+        libID.rentBook(bookId);
+    }
+    public static void returnABook(Book bookId, User userID, Library libID){
 
     }
 }

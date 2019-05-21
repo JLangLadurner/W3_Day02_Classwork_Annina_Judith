@@ -13,7 +13,7 @@ public class Book {
     String publisher;
     GregorianCalendar rentStart;
     GregorianCalendar rentEnd;
-    private Status aStatus;
+    public Status aStatus;
     public enum Status {
        Available,
        notAvailable
@@ -30,10 +30,11 @@ public class Book {
         this.aStatus = aStatus;
     }
 
-    public void rentAbook(String bookId){
-        this.rentStart= (GregorianCalendar) Calendar.getInstance();//actuelles Datum
+    public void rentingBook(){
+        this.rentStart= (GregorianCalendar) Calendar.getInstance();//aktuellesDatum
         this.rentEnd = calcRentDur();
     }
+
 
     public GregorianCalendar calcRentDur(){
         if(rentStart != null){

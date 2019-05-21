@@ -19,8 +19,9 @@ public class User {
         ArrayList<String>usrBooks = new ArrayList<>();
     }
     //adds books to User
-    public void setUsrBooks(String bookId){
-        usrBooks.add(bookId);
+    public void setUsrBooks(Book bookId){
+        String IDofBook = bookId.toString();
+        usrBooks.add(IDofBook);
     }
 
 }
