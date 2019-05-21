@@ -51,10 +51,12 @@ public class Main {
         Library lib1 = new Library(bookLib);
         Library lib2 = new Library(bookLib2);
 
-        lib1.rentAbook("b1", usr1);
+        rentAbook("b1", "u1");
     }
 
-    public void rentAbook(String bookId, String userID){
+    public static void rentAbook(String bookId, String userID){
+
+        
 
 
     }
