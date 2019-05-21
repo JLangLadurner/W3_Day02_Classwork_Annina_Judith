@@ -27,7 +27,7 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-
+        //user creation
         User usr1 = new User("Otto", "otto@anyemail.com");
         User usr2 = new User("Annina", "annina@anyemail.com");
         User usr3 = new User("Simon", "simon@anyemail.com");
@@ -51,12 +51,10 @@ public class Main {
         Library lib1 = new Library(bookLib);
         Library lib2 = new Library(bookLib2);
 
-        rentAbook("b1", "u1");
+        rentABook("b1", "u1");
     }
 
-    public static void rentAbook(String bookId, String userID){
-
-        
+    public static void rentABook(String bookId, String userID){
 
 
     }

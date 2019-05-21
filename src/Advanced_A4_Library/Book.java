@@ -13,8 +13,13 @@ public class Book {
     String publisher;
     GregorianCalendar rentStart;
     GregorianCalendar rentEnd;
+    private Status aStatus;
+    public enum Status {
+       Available,
+       notAvailable
+    }
 
-    Book (String title, String author, String publisher){
+    Book (String title, String author, String publisher, Status aStatus){
         counter++;
         this.bookId = "b" + counter;
         this.title = title;
@@ -22,6 +27,7 @@ public class Book {
         this.publisher = publisher;
         GregorianCalendar rentStart = null;
         GregorianCalendar rentEnd = null;
+        this.aStatus = aStatus;
     }
 
     public void rentAbook(String bookId){
