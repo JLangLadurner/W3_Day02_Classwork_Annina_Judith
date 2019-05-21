@@ -12,7 +12,8 @@ public class Library {
         this.libId = "l" + counter;
         this.library = library;
     }
-    public void rentBook(String bookId){
-       library.remove(bookId);
+    public void rentBook(Book bookId){
+        bookId.toString();
+        library.remove(bookId);
     }
 }

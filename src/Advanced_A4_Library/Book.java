@@ -24,7 +24,7 @@ public class Book {
         GregorianCalendar rentEnd = null;
     }
 
-    public void rentAbook(String bookId){
+    public void rentingBook(){
         this.rentStart= (GregorianCalendar) Calendar.getInstance();//actuelles Datum
         this.rentEnd = calcRentDur();
     }
